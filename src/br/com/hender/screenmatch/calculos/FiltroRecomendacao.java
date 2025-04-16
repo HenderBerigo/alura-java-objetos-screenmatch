@@ -1,6 +1,5 @@
 package br.com.hender.screenmatch.calculos;
 
-import br.com.hender.screenmatch.modelos.Titulo;
 
 public class FiltroRecomendacao {
 
