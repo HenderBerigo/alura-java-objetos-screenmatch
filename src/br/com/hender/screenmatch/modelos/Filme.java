@@ -5,6 +5,11 @@ import br.com.hender.screenmatch.calculos.Classificavel;
 public class Filme extends Titulo implements Classificavel {
     private String diretor;
 
+    public Filme(String nome, int anoDeLancamento) {
+      this.setNome(nome);
+      this.setAnoDeLancamento(anoDeLancamento);
+    }
+
     public String getDiretor() {
         return diretor;
     }
@@ -14,8 +19,12 @@ public class Filme extends Titulo implements Classificavel {
     }
 
     @Override
-    protected void exibeInformacoesExtras() {
-        if (diretor == null) {
+    public void exibeInformacoesExtras() {
+        System.out.println();
+        System.out.println("Informações do filme: "+ this.getNome());
+        System.out.println("Ano de Laçamento: "+ this.getAnoDeLancamento());
+        System.out.println("Duração em minutos: "+ this.getDuracaoEmMinutos());
+        if (this.diretor == null) {
             System.out.println("Diretor não informado");
 
         } else {

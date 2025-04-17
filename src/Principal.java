@@ -6,9 +6,9 @@ import br.com.hender.screenmatch.modelos.*;
 
 public class Principal {
     public static void main(String[] args) {
-        Filme filme1 = new Filme();
-        filme1.setNome("O Poderoso Chefão");
-        filme1.setAnoDeLancamento(1976);
+        Filme filme1 = new Filme("O Poderoso Chefão", 1976);
+        //filme1.setNome();
+        //filme1.setAnoDeLancamento(1976);
         filme1.setDuracaoEmMinutos(180);
         filme1.setIncluidoNoPlano(true);
 
@@ -18,9 +18,9 @@ public class Principal {
         filme1.setTipo(TipoTitulo.FILME);
         filme1.exibeFichaTecnica();
 
-        Filme filme2 = new Filme();
-        filme2.setNome("No Limite do Amanhã");
-        filme2.setAnoDeLancamento(2014);
+        Filme filme2 = new Filme("No Limite do Amanhã", 2014);
+        //filme2.setNome();
+        // filme2.setAnoDeLancamento(2014);
         filme2.setDuracaoEmMinutos(113);
         filme2.setIncluidoNoPlano(true);
         filme2.setDiretor("Tom Cruiser");
@@ -30,7 +30,7 @@ public class Principal {
         // filme2.avaliar(9.0);
         filme2.setTipo(TipoTitulo.FILME);
         filme2.exibeFichaTecnica();
-
+        
         Serie lost = new Serie();
         lost.setNome("Lost");
         lost.setTemporadas(10);
@@ -40,12 +40,12 @@ public class Principal {
         lost.setMinutosPorEpsodio(50);
         lost.setTipo(TipoTitulo.SERIE);
         lost.exibeFichaTecnica();
-
+        
         CalculadoraDeTempo calculadora = new CalculadoraDeTempo();
         calculadora.inclui(filme2);
         calculadora.inclui(filme1);
         calculadora.inclui(lost);
-
+        
         FiltroRecomendacao filtro = new FiltroRecomendacao();
         filtro.filtra(filme1);
 
@@ -54,17 +54,23 @@ public class Principal {
         epsodio.setSerie(lost);
         epsodio.setTotalVisulizacoes(300);
         filtro.filtra(epsodio);
-
-        var filme3 = new Filme();
-        filme3.setNome("Matrix");
+        
+        var filme3 = new Filme("Matrix", 1993);
+        //filme3.setNome();
         filme3.setDuracaoEmMinutos(200);
-        filme3.setAnoDeLancamento(1993);
+        // filme3.setAnoDeLancamento(1993);
         filme3.avalia(9.5);
+        
+        var filme4 = new Filme("Transformers", 2007);
+        filme4.setDuracaoEmMinutos(144);
+        filme4.setDiretor("Michael Bay");
+        
 
         ArrayList<Filme> listaDeFilmes = new ArrayList<>();
         listaDeFilmes.add(filme3);
         listaDeFilmes.add(0, filme2);
         listaDeFilmes.add(filme1);
+        listaDeFilmes.add(filme4);
         System.out.println();
         System.out.println("*** Lista de Filmes ***");
         System.out.println("Tamanho da lista de filmes:  " + listaDeFilmes.size());
@@ -80,5 +86,8 @@ public class Principal {
         }
         // }
         System.out.println(listaDeFilmes);
+        System.out.println(filme3.toString());
+        filme4.exibeInformacoesExtras();
+        
     }
 }
