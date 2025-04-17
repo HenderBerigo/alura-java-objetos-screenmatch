@@ -23,6 +23,12 @@ public class Principal {
 
     System.out.println("Primeira pessoa da lista: " + pessoas.get(0));
     System.out.println("Tamanho da lista de pessoas: "+ pessoas.size());
+
     System.out.println("Lista de pessoas completa: " + pessoas);
+    System.out.println();
+    System.out.println("Lista de pessoas com foreach:");
+    for (var pessoa : pessoas) {
+      System.out.println(pessoa);
+    }
   }
 }

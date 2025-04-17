@@ -22,7 +22,7 @@ public class Pessoa {
 
   @Override
   public String toString() {
-    // TODO Auto-generated method stub
+
     return this.nome + " tem " + this.idade + " anos.";
   }
 }
