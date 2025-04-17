@@ -21,13 +21,13 @@ public class Principal {
         Filme filme2 = new Filme();
         filme2.setNome("No Limite do Amanhã");
         filme2.setAnoDeLancamento(2014);
-        filme2.setDuracaoEmMinutos( 113);
+        filme2.setDuracaoEmMinutos(113);
         filme2.setIncluidoNoPlano(true);
         filme2.setDiretor("Tom Cruiser");
 
         filme2.avalia(8.0);
         filme2.avalia(8.5);
-        //filme2.avaliar(9.0);
+        // filme2.avaliar(9.0);
         filme2.setTipo(TipoTitulo.FILME);
         filme2.exibeFichaTecnica();
 
@@ -63,19 +63,22 @@ public class Principal {
 
         ArrayList<Filme> listaDeFilmes = new ArrayList<>();
         listaDeFilmes.add(filme3);
-        listaDeFilmes.add(filme2);
+        listaDeFilmes.add(0, filme2);
         listaDeFilmes.add(filme1);
         System.out.println();
         System.out.println("*** Lista de Filmes ***");
-        System.out.println("Tamanho da lista de filmes:  "+listaDeFilmes.size());
+        System.out.println("Tamanho da lista de filmes:  " + listaDeFilmes.size());
         System.out.println("Primeiro filme da lista: " + listaDeFilmes.get(0).getNome());
+        listaDeFilmes.set(0, filme1);
+        listaDeFilmes.set(2, filme2);
+        System.out.println("toString() do filme: " + listaDeFilmes.get(0).toString());
 
-        //for(int i =1; i <= listaDeFilmes.size(); i++){
+        // for(int i =1; i <= listaDeFilmes.size(); i++){
         for (Filme filme : listaDeFilmes) {
-                System.out.println("Filme "+ (listaDeFilmes.indexOf(filme) +1)+": " +filme.getNome());
+            System.out.println("Filme " + (listaDeFilmes.indexOf(filme) + 1) + ": " + filme.getNome());
 
-            }
-        //}
-
+        }
+        // }
+        System.out.println(listaDeFilmes);
     }
 }

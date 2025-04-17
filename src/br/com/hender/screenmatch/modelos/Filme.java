@@ -15,7 +15,7 @@ public class Filme extends Titulo implements Classificavel {
 
     @Override
     protected void exibeInformacoesExtras() {
-        if(diretor == null){
+        if (diretor == null) {
             System.out.println("Diretor não informado");
 
         } else {
@@ -27,5 +27,10 @@ public class Filme extends Titulo implements Classificavel {
     @Override
     public int getClassificacao() {
         return (int) pegaMedia() / 2;
+    }
+
+    @Override
+    public String toString() {
+        return "Filme: " + this.getNome() + " (" + this.getAnoDeLancamento() + ")";
     }
 }
