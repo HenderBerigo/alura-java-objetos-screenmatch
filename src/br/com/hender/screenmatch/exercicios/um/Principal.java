@@ -1,4 +1,4 @@
-package br.com.hender.screenmatch.exercicios;
+package br.com.hender.screenmatch.exercicios.um;
 
 import java.util.ArrayList;
 

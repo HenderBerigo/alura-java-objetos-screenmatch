@@ -1,4 +1,4 @@
-package br.com.hender.screenmatch.exercicios;
+package br.com.hender.screenmatch.exercicios.um;
 
 public class Pessoa {
   private String nome;
