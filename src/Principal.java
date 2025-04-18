@@ -7,8 +7,8 @@ import br.com.hender.screenmatch.modelos.*;
 public class Principal {
     public static void main(String[] args) {
         Filme filme1 = new Filme("O Poderoso Chefão", 1976);
-        //filme1.setNome();
-        //filme1.setAnoDeLancamento(1976);
+        //filme1.setNome();  *** Criado pelo construtor
+        //filme1.setAnoDeLancamento(1976);  *** Criado pelo construtor
         filme1.setDuracaoEmMinutos(180);
         filme1.setIncluidoNoPlano(true);
 
@@ -19,8 +19,8 @@ public class Principal {
         filme1.exibeFichaTecnica();
 
         Filme filme2 = new Filme("No Limite do Amanhã", 2014);
-        //filme2.setNome();
-        // filme2.setAnoDeLancamento(2014);
+        //filme2.setNome();  *** Criado pelo construtor
+        // filme2.setAnoDeLancamento(2014);  *** Criado pelo construtor
         filme2.setDuracaoEmMinutos(113);
         filme2.setIncluidoNoPlano(true);
         filme2.setDiretor("Tom Cruiser");
@@ -31,11 +31,11 @@ public class Principal {
         filme2.setTipo(TipoTitulo.FILME);
         filme2.exibeFichaTecnica();
         
-        Serie lost = new Serie();
-        lost.setNome("Lost");
+        Serie lost = new Serie("Lost", 2008);
+        //lost.setNome(); *** Criado pelo construtor
         lost.setTemporadas(10);
         lost.setEpsodiosPorTemporada(22);
-        lost.setAnoDeLancamento(2008);
+        //lost.setAnoDeLancamento(2008); *** Criado pelo construtor
         lost.setDuracaoEmMinutos(50);
         lost.setMinutosPorEpsodio(50);
         lost.setTipo(TipoTitulo.SERIE);
@@ -56,9 +56,9 @@ public class Principal {
         filtro.filtra(epsodio);
         
         var filme3 = new Filme("Matrix", 1993);
-        //filme3.setNome();
+        //filme3.setNome();  *** Criado pelo construtor
         filme3.setDuracaoEmMinutos(200);
-        // filme3.setAnoDeLancamento(1993);
+        // filme3.setAnoDeLancamento(1993);  *** Criado pelo construtor
         filme3.avalia(9.5);
         
         var filme4 = new Filme("Transformers", 2007);
@@ -77,7 +77,7 @@ public class Principal {
         System.out.println("Primeiro filme da lista: " + listaDeFilmes.get(0).getNome());
         listaDeFilmes.set(0, filme1);
         listaDeFilmes.set(2, filme2);
-        System.out.println("toString() do filme: " + listaDeFilmes.get(0).toString());
+        System.out.println("toString() do filme 0: " + listaDeFilmes.get(0).toString());
 
         // for(int i =1; i <= listaDeFilmes.size(); i++){
         for (Filme filme : listaDeFilmes) {
@@ -85,6 +85,7 @@ public class Principal {
 
         }
         // }
+        System.out.println();
         System.out.println(listaDeFilmes);
         System.out.println(filme3.toString());
         filme4.exibeInformacoesExtras();

@@ -10,6 +10,13 @@ public abstract class Titulo {
     private int duracaoEmMinutos;
     private TipoTitulo tipo;
 
+    
+
+    public Titulo(String nome, int anoDeLancamento) {
+        this.nome = nome;
+        this.anoDeLancamento = anoDeLancamento;
+    }
+
     public TipoTitulo getTipo() {
         return tipo;
     }

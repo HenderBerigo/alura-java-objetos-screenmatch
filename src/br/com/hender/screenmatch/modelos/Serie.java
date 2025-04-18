@@ -4,6 +4,11 @@ import br.com.hender.screenmatch.calculos.Classificavel;
 
 public class Serie extends Titulo implements Classificavel {
 
+    public Serie(String nome, int anoDeLancamento) {
+        super(nome, anoDeLancamento);
+        
+    }
+
     private int temporadas;
     private int epsodiosPorTemporada;
     private  boolean ativa;
