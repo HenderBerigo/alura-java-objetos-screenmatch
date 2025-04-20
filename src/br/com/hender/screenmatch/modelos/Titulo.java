@@ -1,6 +1,6 @@
 package br.com.hender.screenmatch.modelos;
 
-public abstract class Titulo {
+public abstract class Titulo implements Comparable<Titulo>{
 
     private String nome;
     private int anoDeLancamento;
@@ -97,6 +97,12 @@ public abstract class Titulo {
 
     public double pegaMedia(){
         return somaDasAvaliacoes / totalDeAvaliacoes;
+    }
+
+    @Override
+    public int compareTo(Titulo outroTitulo) {
+        
+        return this.getNome().compareTo(outroTitulo.getNome());
     }
 
 //    protected void exibeInformacoesExtras() {
