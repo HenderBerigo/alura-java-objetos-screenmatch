@@ -1,5 +1,8 @@
 package br.com.hender.screenmatch.principal;
-import java.util.ArrayList;
+// import java.util.ArrayList;
+
+import java.util.LinkedList;
+import java.util.List;
 
 import br.com.hender.screenmatch.calculos.CalculadoraDeTempo;
 import br.com.hender.screenmatch.calculos.FiltroRecomendacao;
@@ -67,7 +70,7 @@ public class Principal {
         filme4.setDiretor("Michael Bay");
         
 
-        ArrayList<Filme> listaDeFilmes = new ArrayList<>();
+        List<Filme> listaDeFilmes = new LinkedList<>();
         listaDeFilmes.add(filme3);
         listaDeFilmes.add(0, filme2);
         listaDeFilmes.add(filme1);

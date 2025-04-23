@@ -4,9 +4,10 @@ import br.com.hender.screenmatch.modelos.Filme;
 import br.com.hender.screenmatch.modelos.Serie;
 import br.com.hender.screenmatch.modelos.Titulo;
 
-import java.util.ArrayList;
+// import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
+import java.util.LinkedList;
 import java.util.List;
 
 public class PrincipalComListas {
@@ -26,7 +27,7 @@ public class PrincipalComListas {
     var f1 = filme4;
     f1.setNome("Tranformers 2 - Era da extinção");
 
-    ArrayList<Titulo> lista = new ArrayList<>();
+    List<Titulo> lista = new LinkedList<>();
     lista.add(filme3);
     lista.add(0, filme2);
     lista.add(filme1);
@@ -45,7 +46,7 @@ public class PrincipalComListas {
       }
     }
 
-    ArrayList<String> buscaPorArtista = new ArrayList<>();
+    List<String> buscaPorArtista = new LinkedList<>();
     buscaPorArtista.add("Laila");
     buscaPorArtista.add("José");
     buscaPorArtista.add("Hender");
