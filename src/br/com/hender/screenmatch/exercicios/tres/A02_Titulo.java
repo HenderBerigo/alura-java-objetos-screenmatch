@@ -26,7 +26,11 @@ public A02_Titulo(String titulo){
 
 @Override
 public String toString() {
+<<<<<<< HEAD
 
+=======
+  // TODO Auto-generated method stub
+>>>>>>> 4b55da538306bb5487309bf9f072e33c29d41383
   return this.nome;
 }
 }
